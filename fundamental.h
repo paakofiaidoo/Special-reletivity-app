@@ -6,7 +6,7 @@ using namespace std;
 float velocityF();
 float c(){
     int inp;
-    float c;
+    float sol;
     cout << "what constant will you use for the speed of light"<<endl;
     cout << "1) 3x10^8 m/s \n 2) 299 792 458 m / s"<<endl;
     cin >> inp;
@@ -14,34 +14,46 @@ float c(){
     switch (inp)
     {
     case 1:
-        c = 3.0e8;
+        sol = 3.0e8;
         break;
     case 2:
-        c = 2.9e8;
-
+        sol = 2.99792458e8;
+        break;
     default:
+    std::cout << "invalid input, try again" << std::endl;
+        c();
         break;
     }
-    cout << "Therefore the speed of light, c = "<< c <<endl;
-    return c;
+    cout << "Therefore the speed of light, c = "<< sol << " m/s" <<endl;
+    return sol;
 }
 
 float velocityF(){
     cout << "\n what form of input are you giving for the velocity: \n1) x *10^8 m/s\n 2) x m/s" << endl;
     int x;
+    float sol;
     float velocity;
     cin >> x;
     switch (x)
     {
     case 1:
+        cout<< "input the value of v ";
         cin >> x ;
         velocity = x * 1e8;
-
+        break;
     case 2:
+        cout<< "input the value of v";
         cin >> x ;
         velocity = x;
         break;
+    /*case 3:
+        cin >> x;
+        sol = c();
+        velocity = x* sol;
+    */
     default:
+        std::cout << "invalid input, try again " << std::endl;
+        velocityF();
         break;
     }
     try
@@ -49,7 +61,7 @@ float velocityF(){
         int err;
         if(velocity > 3e8 )
             throw err;
-    cout << "Therefore velocity, v = "<< velocity<<endl;
+        cout << "Therefore velocity, v = "<< velocity<< "m/s"<<endl;
         return velocity;
     }
     catch(int e)
@@ -81,6 +93,6 @@ float gamma(){
     return gamma;
 }
  /*int main() {
-     gamma();
+     c();
      return 0;
  }*/
