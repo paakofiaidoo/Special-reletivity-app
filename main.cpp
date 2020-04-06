@@ -9,6 +9,7 @@ int main() {
 	//float speedOfLight = c();
 	string option;
 	cin >> option;
+	option(option);
 
 	return 0;
 }
