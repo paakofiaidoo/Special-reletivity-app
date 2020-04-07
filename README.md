@@ -9,7 +9,7 @@ this involes:
 6. Reletivitic Momentum
 7. Reletivitic Energy
 8. Reletivitic mass
-9. lorentz factor (gamma)
+9. lorenz factor (gamma)
 10. speed ratio (beta)
 
 for this calcuations we will use:

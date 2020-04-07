@@ -15,7 +15,7 @@ void findT();
 //function to find to
 void findTo();
 //function to find v
-void findV();
+void findVTime();
 //main function
 void timeDilation();
 
@@ -33,7 +33,7 @@ void timeDilation(){
         findTo();
         break;
     case 3:
-        findV();
+        findVTime();
         break;
 
     default:
@@ -62,7 +62,7 @@ void findTo(){
 
 }
 
-void findV(){
+void findVTime(){
     cout << "input the value for t(time for stationary observer) : ";
     cin >> t;
     cout << "\ninput the value for to(proper time/time for observer in motion) : ";
