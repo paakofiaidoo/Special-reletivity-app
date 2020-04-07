@@ -1,5 +1,7 @@
 #include <iostream>
 #include <Cmath>
+#ifndef fundamenatal_h
+#define fundamenatal_h
 
 using namespace std;
 
@@ -96,3 +98,4 @@ float gamma(){
      c();
      return 0;
  }*/
+#endif

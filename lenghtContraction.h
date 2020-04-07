@@ -8,7 +8,7 @@ float l;
 //lenght observed by stationary observer/proper lenght (lo)
 float lo;
 //velocity of the moving body
-double v;
+double vL;
 
 // function to find L
 void findL();
@@ -47,8 +47,8 @@ void findL(){
     cout << "input the value for lo (lenght observed by stationary observer/proper lenght) : ";
     cin >> lo;
     cout << "input the value for v(velocity of the body) : ";
-    v = velocityF();
-    l = lo / gamma(v);
+    vL = velocityF();
+    l = lo / gamma(vL);
     cout << "\n The lenght for observer in motion is "<< l<< " m"<<endl;
 }
 
@@ -56,8 +56,8 @@ void findLo(){
     cout << "input the value for l(lenght for observer in motion) : ";
     cin >> l;
     cout << "\ninput the value for v(velocity of the body) : "<<endl;
-    v = velocityF();
-    lo = l * gamma(v);
+    vL = velocityF();
+    lo = l * gamma(vL);
     cout << "\n The proper lenght/lenght observed by stationary observer, lo = "<< lo << " m"<<endl;
 
 }
@@ -68,7 +68,7 @@ void findVLenght(){
     cout << "\ninput the value for lo (lenght observed by stationary observer/proper lenght) : ";
     cin >> lo;
     float com = l/lo;
-    v = c() * (sqrt(1 - pow(com,2)));
-    cout << "\n The velocity of the body, v = "<< v <<endl;
+    vL = c() * (sqrt(1 - pow(com,2)));
+    cout << "\n The velocity of the body, v = "<< vL <<endl;
 
 }
