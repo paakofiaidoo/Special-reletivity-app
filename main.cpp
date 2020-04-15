@@ -2,6 +2,8 @@
 #include"home-ui.h"
 #include "TimeDilation.h"
 #include "lenghtContraction.h"
+#include "galileanTransform.h"
+#include "lorenzTransform.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -19,10 +21,10 @@ int main() {
         lenghtContraction();
     }
     else if(option =="3"){
-        //GallianTransformations();
+        galileanTransform();
     }
     else if(option =="4"){
-        //LorenzTransformations();
+        lorenzTransformations();
     }
     else if(option =="5"){
         //dopplerEffect();
@@ -48,6 +50,6 @@ int main() {
 		main();
 	}
 
-
+    system("PAUSE");
 	return 0;
 }

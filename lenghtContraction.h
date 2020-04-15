@@ -38,7 +38,7 @@ void lenghtContraction(){
 
     default:
         cout << "invalid input, try again: " << endl;
-        lenghtContraction();
+        //lenghtContraction();
         break;
     }
 }
