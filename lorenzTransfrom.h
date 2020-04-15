@@ -57,12 +57,9 @@ void velocityTransformT() {
     vlt = velocityF();
     float temp = 1 + (vlt / pow(c(),2)) * ux1lt;
     uxlt = (ux1lt + vlt) / temp ;
-    cout << "the "
+    cout << "the value for Ux is : "<< uxlt<<endl;
        
     }
-
-    return (gamma() * (t1 + ( beta * x1)));
-}
 
 
 
