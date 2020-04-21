@@ -13,7 +13,10 @@ using namespace std;
     float xlt, tlt;
 //
     float uxlt, ux1lt, uzlt;
-
+    
+void positionTransform();
+void velocityTransform();
+void lorenzTransformations();
 void positionTransform()  {
     std::cout << "\n what are you transforming \n1) x \n2) t" << std::endl;
     int inp;
@@ -21,17 +24,17 @@ void positionTransform()  {
     switch (inp)
     {
     case 1:
-        cout << "\ninput x` : ";
+        {cout << "\ninput x` : ";
         cin >>x1lt;
         cout << "input t` : ";
         cin >> t1lt;
         cout << "input v : ";
         vlt = velocityF();
-        xlt = gamma(vlt)*( x1lt +( vlt*t1lt))
-        cout >>"the value of x with respect to S` is "<< xlt<<endl;
-        break;
+        xlt = gamma(vlt)*( x1lt +( vlt*t1lt));
+        cout << "the value of x with respect to S` is "<< xlt<<endl;
+        break;}
     case 2:
-        cout << "\ninput x` : ";
+        {cout << "\ninput x` : ";
         cin >>x1lt;
         cout << "input t` : ";
         cin >> t1lt;
@@ -39,8 +42,8 @@ void positionTransform()  {
         vlt = velocityF();
         float temp = (vlt *xlt)/ pow(c(),2);
         tlt = gamma(vlt)*( temp +( t1lt));
-        cout >>"the value of t with respect to S` is "<< tlt<<endl;
-        break;
+        cout <<"the value of t with respect to S` is "<< tlt<<endl;
+        break;}
     default:
         cout << "invalid input, try again";
         positionTransform();
@@ -49,14 +52,14 @@ void positionTransform()  {
     
 }
 
-void velocityTransformT() {
+void velocityTransform() {
     cout << "to find the Ux(velocity of particle in the x direction) ";
     cout << "\ninput Ux` : ";
     cin >> ux1lt;
     cout << "input v : ";
     vlt = velocityF();
-    float temp = 1 + (vlt / pow(c(),2)) * ux1lt;
-    uxlt = (ux1lt + vlt) / temp ;
+    float tem = 1 + (vlt / pow(c(),2)) * ux1lt;
+    uxlt = (ux1lt + vlt) / tem ;
     cout << "the value for Ux is : "<< uxlt<<endl;
        
     }

@@ -80,6 +80,13 @@ float beta(double v){
     cout << "speed ratio , beta = "<< beta<<endl;
     return beta;
 }
+float beta(){
+    float beta;
+    float velo = velocityF();
+    beta = velo / c();
+    cout << "speed ratio , beta = "<< beta<<endl;
+    return beta;
+}
 
 float gamma(double velocity){
     float gamma;
