@@ -1,5 +1,6 @@
 #include <iostream>
-#include "fundamental.h"
+#include <cmath>
+#include "functions.h"
 
 using namespace std;
 
@@ -10,14 +11,7 @@ float to;
 //velocity of the moving body
 double vT;
 
-// function to find  t
-void findT();
-//function to find to
-void findTo();
-//function to find v
-void findVTime();
-//main function
-void timeDilation();
+
 
 void timeDilation(){
     std::cout << "what are you calculating for : " << std::endl;

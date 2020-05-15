@@ -1,9 +1,6 @@
 #include <iostream>
-#include"home-ui.h"
-#include "TimeDilation.h"
-#include "lenghtContraction.h"
-#include "galileanTransform.h"
-#include "lorenzTransfrom.h"
+#include "functions.h"
+
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
@@ -11,13 +8,13 @@ int main() {
 	//this is the the ui
 
 	//float speedOfLight = c();
-	string option, end;
+	string option;
 
     do{
         homeUI();
         cin >> option;
         if(option =="1"){
-        timeDilation();
+            timeDilation();
         }
         else if(option =="2"){
             lenghtContraction();
@@ -56,9 +53,9 @@ int main() {
         }
 
         std::cout << "do you want to perform another calculation press Y/N" << std::endl;
-        cin >> end;
+        cin >> option;
 
-    }while(end == "y" || end =="Y");
+    }while(option == "y" || option =="Y");
    //system("pause");
 	return 0;
 }

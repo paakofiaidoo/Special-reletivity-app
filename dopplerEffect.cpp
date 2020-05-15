@@ -1,12 +1,12 @@
 #include <iostream>
 #include <cmath>
-#include "fundamental.h"
+#include "functions.h"
 
 using namespace std;
 
-//time of stationary observer(t)
+//for values of frequency
 float f,fo;
-//time for observer in motion/proper time (to)
+//for values of wave lenght
 float w, wo;
 // B for beta so c() dont run twice but once
 float B;
@@ -51,39 +51,76 @@ void receding(){
     switch (inp)
     {
     case 1:
-        frequencyAproching();
+        frequencyReceding();
         break;
     case 2:
-        cout << "input the value of f* "<<endl;
-        cin >>fo;
-        cout << "input the value for velocity of the ";
-        vD = velocityF();
-        B = beta(vD)
-        float temp = (1-B)/(1+B);
-        f = temp * fo;
-        cout<< "the frequency of the light as the source and observer are receding form eachother is : " << f<<endl;
+        waveLenghtReceding();
         break;
 
     default:
         break;
     }
-    cout << "input the value for v(velocity of the body) : ";
-    vT = velocityF();
-    t = to * gamma(vT);
-    cout << "\n The time for stationary observer is "<< t<< " sec"<<endl;
 }
 
 void approching(){
-    cout << "input the value for t(time for stationary observer) : ";
-    cin >> t;
-    cout << "\ninput the value for v(velocity of the body) : "<<endl;
-    vT = velocityF();
-    t = to / gamma(vT);
-    cout << "\n The proper time/time for observer in motion, to = "<< t << " sec"<<endl;
+    cout << "what property of light will you be calculating this effect for \n1) frequency \n2) wavelenght: ";
+    int inp;
+    cin >> inp;
+    switch (inp)
+    {
+    case 1:
+        frequencyAproching();
+        break;
+    case 2:
+        waveLenghtAproching();
+
+    default:
+       
 
 }
 
 void frequencyAproching(){
+    int inp;
+    std::cout << "What will you be finding \n1)f \n2)f* \n3) v" << std::endl;
+    cin << inp;
+    switch (inp)
+    {
+    case 1:
+        cout << "input the value of f* "<<endl;
+        cin >>fo;
+        cout << "input the value for velocity of the ";
+        vD = velocityF();
+        B = beta(vD);
+        float temp = (1-B)/(1+B);
+        f = sqrt(temp) * fo;
+        cout<< "the frequency of the light recived as the source and observer are receding form eachother is : " << f<<endl;
+        break;
+    case 2:
+        cout << "input the value of f "<<endl;
+        cin >>f;
+        cout << "input the value for velocity of the ";
+        vD = velocityF();
+        B = beta(vD);
+        float temp = (1+B)/(1-B);
+        fo = sqrt(temp) * f;
+        cout<< "the frequency of the light emited as the source and observer are receding form eachother is : " << f<<endl;
+        break;
+    case 3:
+        cout << "input the value of f "<<endl;
+        cin >>f;
+        cout << "input the value of f* ";
+        cin >>fo;
+        float temp = pow((f/fo),2);
+        vD = ((1-temp)/(1+temp)) * c();
+        cout << "the velocity of the moving body is : "<< vD <<endl;
+    default:
+        cout << "invalid input, try again\n\n";
+        frequencyAproching()
+        break;
+    }
+}
+
+void frequencyReceding(){
     int inp;
     std::cout << "What will you be finding \n1)f \n2)f* \n3) v" << std::endl;
     cin << inp;
@@ -104,13 +141,22 @@ void frequencyAproching(){
         cin >>f;
         cout << "input the value for velocity of the ";
         vD = velocityF();
-        B = beta(vD)
-        float temp = (1-B)/(1+B);
-        f = sqrt(temp) * fo;
+        B = beta(vD);
+        float temp = (1+B)/(1-B);
+        fo = sqrt(temp) * f;
         cout<< "the frequency of the light as the source and observer are receding form eachother is : " << f<<endl;
+        break;
+    case 3:
+        cout << "input the value of f "<<endl;
+        cin >>f;
+        cout << "input the value of f* ";
+        cin >>fo;
+        float temp = pow((f/fo),2);
+        vD = ((1+temp)/(1-temp)) * c();
+        cout << "the velocity of the moving body is : "<< vD <<endl;
     default:
+        cout << "invalid input, try again\n\n";
+        frequencyReceding()
         break;
     }
-
-
 }

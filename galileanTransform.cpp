@@ -1,5 +1,5 @@
 #include <iostream>
-#include "fundamental.h"
+#include "functions.h"
 
 using namespace std;
 //NB: the G in the variable names are to indicated that variable is related to galilean trans...
@@ -13,15 +13,6 @@ float tG;
 float uG, u1G;
 
 
-
-// function to resolve the position using galilean transform 
-void galileanPositionTransform();
-//function to resolve the velocity using galilean transform 
-void galileanVelocityTransform();
-//function to find v
-//void findVLenght();
-//main function
-void galileanTransform();
 
 void galileanTransform(){
     std::cout << "Asuming S and S` are two inertial frames of reference. S' which is moving with respect to S at the constant velocity v in the direction of X axis which begain at a time to=0s and event was recored at time t = t`" << std::endl;

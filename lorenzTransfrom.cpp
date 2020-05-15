@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cmath>
-#include "fundamental.h"
+#include "functions.h"
 
 using namespace std;
 
@@ -13,11 +13,9 @@ using namespace std;
     float xlt, tlt;
 //
     float uxlt, ux1lt, uzlt;
-    
-void positionTransform();
-void velocityTransform();
-void lorenzTransformations();
-void positionTransform()  {
+
+
+void lorenzPositionTransform()  {
     std::cout << "\n what are you transforming \n1) x \n2) t" << std::endl;
     int inp;
     cin >> inp;
@@ -46,13 +44,13 @@ void positionTransform()  {
         break;}
     default:
         cout << "invalid input, try again";
-        positionTransform();
+        lorenzPositionTransform();
         break;
     }
     
 }
 
-void velocityTransform() {
+void lorenzVelocityTransform() {
     cout << "to find the Ux(velocity of particle in the x direction) ";
     cout << "\ninput Ux` : ";
     cin >> ux1lt;
@@ -68,17 +66,17 @@ void velocityTransform() {
 
 
 void lorenzTransformations(){
-    std::cout << "Assuming S and S` are two referece frames where (t, x, y, z) and (t′, x′, y′, z′) are the coordinates of an event in two frames, where the S` is seen from the S as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor" << std::endl;
+    std::cout << "Assuming S and S` are two referece frames where (t, x, y, z) and (t′ , x′ , y′ , z′ ) are the coordinates of an event in two frames, where the S` is seen from the S as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor" << std::endl;
     std::cout << "What will you be calculating for \n1) Position transform \n2) Velocity transfrom" << std::endl;
     int data;
     cin >> data;
     switch (data)
     {
     case 1:
-        positionTransform();
+        lorenzPositionTransform();
         break;
     case 2:
-        velocityTransform();
+        lorenzVelocityTransform();
         break;
     
     default:

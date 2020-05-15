@@ -1,31 +1,25 @@
 #include <iostream>
 #include <Cmath>
-#ifndef fundamenatal_h
-#define fundamenatal_h
+
 
 using namespace std;
 
-float velocityF();
+
 float c(){
     int inp;
     float sol;
     cout << "what constant will you use for the speed of light"<<endl;
     cout << "1) 3x10^8 m/s \n 2) 299 792 458 m / s"<<endl;
-    cin >> inp;
+    std:: cin >> inp;
 
-    switch (inp)
-    {
-    case 1:
-        sol = 3.0e8;
-        break;
-    case 2:
-        sol = 2.99792458e8;
-        break;
-    default:
-    cout << "invalid input, try again" << endl;
-        c();
-        break;
+    if (inp == 1){sol = 3.0e8;}
+    else if (inp == 2){sol = 2.99792458e8;}
+
+    else{
+       cout << "invalid input, try again" << endl;
+       c();
     }
+
     cout << "Therefore the speed of light, c = "<< sol << " m/s" <<endl;
     return sol;
 }
@@ -80,6 +74,13 @@ float beta(double v){
     cout << "speed ratio , beta = "<< beta<<endl;
     return beta;
 }
+float beta(){
+    float beta;
+    float velo = velocityF();
+    beta = velo / c();
+    cout << "speed ratio , beta = "<< beta<<endl;
+    return beta;
+}
 
 float gamma(double velocity){
     float gamma;
@@ -94,8 +95,8 @@ float gamma(){
     cout << "lorentz factor , gamma = "<< gamma<<endl;
     return gamma;
 }
- int main() {
+ /*int main() {
      c();
      return 0;
- }
-#endif
+ }*/
+

@@ -1,5 +1,5 @@
 #include <iostream>
-#include "fundamental.h"
+#include "functions.h"
 
 using namespace std;
 
@@ -10,14 +10,6 @@ float lo;
 //velocity of the moving body
 double vL;
 
-// function to find L
-void findL();
-//function to find Lo
-void findLo();
-//function to find v
-void findVLenght();
-//main function
-void lenghtContraction();
 
 void lenghtContraction(){
     cout << "what are you calculating for : " << endl;
