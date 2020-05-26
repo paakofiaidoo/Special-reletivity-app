@@ -9,12 +9,13 @@ int main() {
 
 	//float speedOfLight = c();
 	string option;
+    SpecialRele Object;
 
     do{
         homeUI();
         cin >> option;
         if(option =="1"){
-            timeDilation();
+            Object.timeDilation();
         }
         else if(option =="2"){
             lenghtContraction();

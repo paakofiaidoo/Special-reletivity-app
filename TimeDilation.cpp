@@ -4,15 +4,16 @@
 
 using namespace std;
 
-//time of stationary observer(t)
-float t;
-//time for observer in motion/proper time (to)
-float to;
-//velocity of the moving body
-double vT;
+class TimeDilation{//time of stationary observer(t)
+private :
+    float t;
+    //time for observer in motion/proper time (to)
+    float to;
+    //velocity of the moving body
+    double vT;
 
 
-
+public:
 void timeDilation(){
     std::cout << "what are you calculating for : " << std::endl;
     std::cout << "1. time of stationary observer\n2. proper time / time for observer in motion\n3. velocity of motion" << std::endl;
@@ -66,3 +67,4 @@ void findVTime(){
     cout << "\n The velocity of the body, v = "<< vT <<endl;
 
 }
+};

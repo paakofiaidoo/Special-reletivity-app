@@ -6,6 +6,21 @@
 #include "lenghtContraction.cpp"
 #include "galileanTransform.cpp"
 #include "lorenzTransfrom.cpp"
+#include "dataBase.cpp"
+
+
+
+class SpecialRele: public TimeDilation
+{
+private:   
+    //before event
+    double xo , to, lo,vo;
+    double x ,t, l, v;
+public:
+    
+};
+
+
 
 
 //functions on fundamental.cpp
@@ -21,15 +36,7 @@ int plm =10000;
 void homeUI();
 #endif
 
-//functions in TimeDilation.cpp
-// function to find  t
-void findT();
-//function to find to
-void findTo();
-//function to find v
-void findVTime();
-//main function
-void timeDilation();
+
 
 //functions in lenghtContraction.cpp
 // function to find L

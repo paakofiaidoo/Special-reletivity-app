@@ -1,26 +1,29 @@
 #include <iostream>
 #include <Cmath>
-
+#include "database.cpp"
 
 using namespace std;
 
-
+dataBase th;
 float c(){
     int inp;
     float sol;
+    /*if (th.findInDatabase("speed of light") != 0){
+        return th.findInDatabase("speed of light");
+    }*/
     cout << "what constant will you use for the speed of light"<<endl;
     cout << "1) 3x10^8 m/s \n 2) 299 792 458 m / s"<<endl;
     std:: cin >> inp;
 
     if (inp == 1){sol = 3.0e8;}
     else if (inp == 2){sol = 2.99792458e8;}
-
     else{
        cout << "invalid input, try again" << endl;
        c();
     }
 
     cout << "Therefore the speed of light, c = "<< sol << " m/s" <<endl;
+    th.addToDatabase("speed of light", sol);
     return sol;
 }
 
@@ -65,7 +68,6 @@ float velocityF(){
         cout << "the velocity is greater that the speed of light breaking the theory of relativity" << endl;
         velocityF();
     }
-
 }
 
 float beta(double v){
@@ -95,8 +97,11 @@ float gamma(){
     cout << "lorentz factor , gamma = "<< gamma<<endl;
     return gamma;
 }
- /*int main() {
+ int main() {
      c();
+     c();
+     c();
+     th.displayDatabase();
      return 0;
- }*/
+ }
 
