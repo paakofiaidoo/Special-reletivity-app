@@ -17,6 +17,4 @@ for this calcuations we will use:
 -the speed of light ,c which can be c= 3e8 m/s or c= 299792458 m/s
 - velocity of the motion, v
 -beta(speed ratio) = c / v
--gamma(lorentz factor) =
-Time Dilation
-
+-gamma(lorentz factor) 

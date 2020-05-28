@@ -1,17 +1,16 @@
-//#include "functions.h"
-#include "dataBase.h"
+#include "VectorDatabase.h"
 #include <iostream>
 
 using namespace std;
 
-void Database::addToDatabase(string name, double num){
+void VectorDatabase::addToDatabase(string name, double num){
     //input in the name of the data you what to put in
     header.push_back(name);
     //input the value to the date you want to put in dtatbase
     data.push_back(num);
 }
 
-double Database::findInDatabase(string dataName){
+double VectorDatabase::findInDatabase(string dataName){
     int index;
     bool indicator = false;
     for (int i = 0; i < data.size(); i++)
@@ -27,14 +26,14 @@ double Database::findInDatabase(string dataName){
 
     return 0;
 }
-void Database::displayDatabase(){
+void VectorDatabase::displayDatabase(){
     for (int i = 0; i < data.size(); i++)
     {
         cout <<i<<", "<< header[i] << " : " << data[i] << endl;
     }
     
 }
-void Database::displayData(int i){
+void VectorDatabase::displayData(int i){
     cout << i <<", "<< header[i] << " : " << data[i] << endl;
 }
 
@@ -43,7 +42,7 @@ void Database::displayData(int i){
 
 
 
-int main() {
+/*int main() {
     Database mainData;
     mainData.addToDatabase("ma", 123);
     mainData.addToDatabase("ma", 34);
@@ -53,4 +52,6 @@ int main() {
     cout << mainData.findInDatabase("ma");
     return 0;
 }
+*/
+
 

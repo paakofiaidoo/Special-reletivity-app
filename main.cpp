@@ -1,30 +1,34 @@
 #include <iostream>
 #include "functions.h"
+#include "SpecialReletivity.h"
+#include "VectorDatabase.h"
+#include "Fundamentals.h"
 
 
-/* run this program using the console pauser or add your own getch, system("pause") or input loop */
+VectorDatabase th;
+using namespace std;
 
 int main() {
-	//this is the the ui
+	th.displayDatabase();
 
-	//float speedOfLight = c();
 	string option;
-    SpecialRele Object;
+    
 
     do{
-        homeUI();
+        // ui is a construtor for the class
+    	SpecialReletivity Object;
         cin >> option;
         if(option =="1"){
             Object.timeDilation();
         }
         else if(option =="2"){
-            lenghtContraction();
+            Object.lenghtContraction();
         }
         else if(option =="3"){
-            galileanTransform();
+           Object.galileanTransform();
         }
         else if(option =="4"){
-            lorenzTransformations();
+           Object.lorenzTransformations();
         }
         else if(option =="5"){
             //dopplerEffect();
@@ -43,10 +47,12 @@ int main() {
             cout << "under development";
         }
         else if(option =="9"){
-            gamma();
+        	Fundamentals Motion;
+            Motion.gamma();
         }
         else if(option =="10"){
-            beta();
+            Fundamentals Motion;
+            Motion.beta();
             }
         else{
             cout << "invalid input try again";

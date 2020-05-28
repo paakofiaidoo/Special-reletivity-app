@@ -1,21 +1,18 @@
 #include <iostream>
 #include <cmath>
 #include "functions.h"
-
+#include "LorenzTransfrom.h"
 using namespace std;
 
 
-/*S and S` are two referece frames where (t, x, y, z) and (t′, x′, y′, z′) are the coordinates of an event in two frames, where the primed frame is seen from the unprimed frame as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor
+/*S and S` are two referece frames where (t, x, y, z) and (t', x', y', z') are the coordinates of an event in two frames, where the primed frame is seen from the unprimed frame as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor
 */
 //lt at the end of each variable denote that the variable is for lorenz transform
 //the values of cordinates of S` for lorenz transform
-    float x1lt, t1lt, vlt;
-    float xlt, tlt;
-//
-    float uxlt, ux1lt, uzlt;
 
 
-void lorenzPositionTransform()  {
+
+void LorenzTransfrom::lorenzPositionTransform()  {
     std::cout << "\n what are you transforming \n1) x \n2) t" << std::endl;
     int inp;
     cin >> inp;
@@ -50,7 +47,7 @@ void lorenzPositionTransform()  {
     
 }
 
-void lorenzVelocityTransform() {
+void LorenzTransfrom::lorenzVelocityTransform() {
     cout << "to find the Ux(velocity of particle in the x direction) ";
     cout << "\ninput Ux` : ";
     cin >> ux1lt;
@@ -59,14 +56,13 @@ void lorenzVelocityTransform() {
     float tem = 1 + (vlt / pow(c(),2)) * ux1lt;
     uxlt = (ux1lt + vlt) / tem ;
     cout << "the value for Ux is : "<< uxlt<<endl;
-       
-    }
+}
 
 
 
 
-void lorenzTransformations(){
-    std::cout << "Assuming S and S` are two referece frames where (t, x, y, z) and (t′ , x′ , y′ , z′ ) are the coordinates of an event in two frames, where the S` is seen from the S as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor" << std::endl;
+void LorenzTransfrom::lorenzTransformations(){
+    std::cout << "Assuming S and S` are two referece frames where (t, x, y, z) and (t' , x' , y' , z' ) are the coordinates of an event in two frames, where the S` is seen from the S as moving with speed v along the x-axis, c is the speed of light, and gamma is the Lorentz factor" << std::endl;
     std::cout << "What will you be calculating for \n1) Position transform \n2) Velocity transfrom" << std::endl;
     int data;
     cin >> data;
@@ -89,5 +85,4 @@ void lorenzTransformations(){
    
          
 }
-
 

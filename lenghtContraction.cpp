@@ -1,66 +1,63 @@
 #include <iostream>
+#include <cmath>
 #include "functions.h"
+#include "LenghtContraction.h"
 
 using namespace std;
 
-//lenght for observer in motion (l)
-float l;
-//lenght observed by stationary observer/proper lenght (lo)
-float lo;
-//velocity of the moving body
-double vL;
 
-
-void lenghtContraction(){
+void LenghtContraction::lenghtContraction(){
     cout << "what are you calculating for : " << endl;
     cout << "1. lenght l for observer in motion\n2. lenght, lo observed by stationary observer/proper lenght\n3. velocity of motion" << endl;
     int inp;
     cin >> inp;
     switch (inp)
-    {
-    case 1:
-        findL();
-        break;
-    case 2:
-        findLo();
-        break;
-    case 3:
-        findVLenght();
-        break;
+        {
+            case 1:
+                findL();
+                break;
+            case 2:
+                findLo();
+                break;
+            case 3:
+                findV();
+                break;
 
-    default:
-        cout << "invalid input, try again: " << endl;
-        //lenghtContraction();
-        break;
+            default:
+                cout << "invalid input, try again: " << endl;
+                lenghtContraction();
+                break;
+        }
     }
-}
 
-void findL(){
+void LenghtContraction::findL(){
     cout << "input the value for lo (lenght observed by stationary observer/proper lenght) : ";
     cin >> lo;
     cout << "input the value for v(velocity of the body) : ";
-    vL = velocityF();
-    l = lo / gamma(vL);
+    v = velocityF();
+    l = lo / gamma(v);
     cout << "\n The lenght for observer in motion is "<< l<< " m"<<endl;
 }
 
-void findLo(){
+void LenghtContraction::findLo(){
     cout << "input the value for l(lenght for observer in motion) : ";
     cin >> l;
     cout << "\ninput the value for v(velocity of the body) : "<<endl;
-    vL = velocityF();
-    lo = l * gamma(vL);
+    v = velocityF();
+    lo = l * gamma(v);
     cout << "\n The proper lenght/lenght observed by stationary observer, lo = "<< lo << " m"<<endl;
 
 }
 
-void findVLenght(){
+void LenghtContraction::findV(){
     cout << "input the value for l(lenght for observer in motion) : ";
     cin >> l;
     cout << "\ninput the value for lo (lenght observed by stationary observer/proper lenght) : ";
     cin >> lo;
     float com = l/lo;
-    vL = c() * (sqrt(1 - pow(com,2)));
-    cout << "\n The velocity of the body, v = "<< vL <<endl;
+    v = c() * (sqrt(1 - pow(com,2)));
+    cout << "\n The velocity of the body, v = "<< v <<endl;
 
 }
+
+

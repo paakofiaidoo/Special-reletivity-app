@@ -1,20 +1,13 @@
 #include <iostream>
 #include "functions.h"
+#include "GalileanTransform.h"
 
 using namespace std;
-//NB: the G in the variable names are to indicated that variable is related to galilean trans...
-//position in the x-aixs of the two reference frames x(xG) and x`(x1G)
-float xG, x1G;
-//velocity of the v(vG) of S` with respect to S
-double vG;
-//time of the frames after the event t because t = t`,
-float tG;
-//velocity of the  frames
-float uG, u1G;
 
 
 
-void galileanTransform(){
+
+void GalileanTransform::galileanTransform(){
     std::cout << "Asuming S and S` are two inertial frames of reference. S' which is moving with respect to S at the constant velocity v in the direction of X axis which begain at a time to=0s and event was recored at time t = t`" << std::endl;
     cout << "what are you calculating for : " << endl;
     cout << "1. Galilean Position Transform\n2. Galilean Velocity Transform" << endl;
@@ -36,7 +29,7 @@ void galileanTransform(){
     }
 }
 
-void galileanPositionTransform(){
+void GalileanTransform::galileanPositionTransform(){
     std::cout << "\nWhat will you be solving for \n1) x\n,2)x`\n3) t\n4) v" << std::endl;
     int inp;
     cin >> inp;
@@ -90,7 +83,7 @@ void galileanPositionTransform(){
     
 }
 
-void galileanVelocityTransform(){
+void GalileanTransform::galileanVelocityTransform(){
     std::cout << "\nWhat will you be solving for \n1) Ux\n,2)x`\n3) v" << std::endl;
     int inp;
     cin >> inp;
@@ -127,3 +120,5 @@ void galileanVelocityTransform(){
     }
     
 }
+
+
