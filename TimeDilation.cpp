@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "functions.h"
 #include "TimeDilation.h"
 
 using namespace std;

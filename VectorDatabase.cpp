@@ -13,7 +13,7 @@ void VectorDatabase::addToDatabase(string name, double num){
 double VectorDatabase::findInDatabase(string dataName){
     int index;
     bool indicator = false;
-    for (int i = 0; i < data.size(); i++)
+    for (unsigned int i = 0; i < data.size(); i++)
     {
         if (dataName == header[i]){
             index =i;
@@ -27,11 +27,11 @@ double VectorDatabase::findInDatabase(string dataName){
     return 0;
 }
 void VectorDatabase::displayDatabase(){
-    for (int i = 0; i < data.size(); i++)
+    for (unsigned int i = 0; i < data.size(); i++)
     {
         cout <<i<<", "<< header[i] << " : " << data[i] << endl;
     }
-    
+
 }
 void VectorDatabase::displayData(int i){
     cout << i <<", "<< header[i] << " : " << data[i] << endl;

@@ -1,6 +1,5 @@
 #include <iostream>
 #include <cmath>
-#include "functions.h"
 #include "LorenzTransfrom.h"
 using namespace std;
 
@@ -44,7 +43,7 @@ void LorenzTransfrom::lorenzPositionTransform()  {
         lorenzPositionTransform();
         break;
     }
-    
+
 }
 
 void LorenzTransfrom::lorenzVelocityTransform() {
@@ -57,8 +56,6 @@ void LorenzTransfrom::lorenzVelocityTransform() {
     uxlt = (ux1lt + vlt) / tem ;
     cout << "the value for Ux is : "<< uxlt<<endl;
 }
-
-
 
 
 void LorenzTransfrom::lorenzTransformations(){
@@ -74,15 +71,15 @@ void LorenzTransfrom::lorenzTransformations(){
     case 2:
         lorenzVelocityTransform();
         break;
-    
+
     default:
         std::cout << "invalid input, try again " << std::endl;
         lorenzTransformations();
         break;
     }
-    
 
-   
-         
+
+
+
 }
 

@@ -1,7 +1,8 @@
 #ifndef GALILEANTRANSFORM_H
 #define GALILEANTRANSFORM_H
+
 #include "Fundamentals.h"
-class GalileanTransform: public Fundamentals
+class GalileanTransform: private Fundamentals
 {	
 	private:
 		float xG, x1G;
@@ -24,3 +25,4 @@ class GalileanTransform: public Fundamentals
 };
 
 #endif
+

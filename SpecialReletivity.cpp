@@ -5,7 +5,7 @@
 using namespace std;
 
 
-void SpecialReletivity::SpecialReletivity(){
+SpecialReletivity::SpecialReletivity(){
 
     
     cout << "#################################################################################################################"<<endl;
@@ -21,3 +21,5 @@ void SpecialReletivity::SpecialReletivity(){
     
 
 }
+
+

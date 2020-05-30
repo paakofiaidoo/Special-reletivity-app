@@ -1,5 +1,4 @@
 #include <iostream>
-#include "functions.h"
 #include "GalileanTransform.h"
 
 using namespace std;
@@ -80,7 +79,7 @@ void GalileanTransform::galileanPositionTransform(){
         galileanPositionTransform();
         break;
     }
-    
+
 }
 
 void GalileanTransform::galileanVelocityTransform(){
@@ -118,7 +117,6 @@ void GalileanTransform::galileanVelocityTransform(){
         galileanPositionTransform();
         break;
     }
-    
-}
 
+}
 

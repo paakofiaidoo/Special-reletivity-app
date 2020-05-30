@@ -31,7 +31,4 @@
 *.out
 *.app
 
-
-
-*win
-.dev
+*.win

@@ -43,14 +43,4 @@ void Database::displayData(int i){
 
 
 
-int main() {
-    Database mainData;
-    mainData.addToDatabase("ma", 123);
-    mainData.addToDatabase("ma", 34);
-    mainData.addToDatabase("ma", 4);
-    mainData.addToDatabase("ma", 153);
-    mainData.displayDatabase();
-    cout << mainData.findInDatabase("ma");
-    return 0;
-}
 

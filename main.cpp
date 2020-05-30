@@ -1,9 +1,14 @@
 #include <iostream>
-#include "functions.h"
 #include "SpecialReletivity.h"
 #include "VectorDatabase.h"
 #include "Fundamentals.h"
-
+#include "TimeDilation.cpp"
+#include "lorenzTransfrom.cpp"
+#include "LenghtContraction.cpp"
+#include "GalileanTransform.cpp"
+#include "Fundamentals.cpp"
+#include "VectorDatabase.cpp"
+#include "SpecialReletivity.cpp"
 
 VectorDatabase th;
 using namespace std;
@@ -12,7 +17,7 @@ int main() {
 	th.displayDatabase();
 
 	string option;
-    
+
 
     do{
         // ui is a construtor for the class

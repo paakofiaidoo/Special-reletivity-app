@@ -1,5 +1,4 @@
 #include "Fundamentals.h"
-
 #include <iostream>
 #include <Cmath>
 #include "VectorDatabase.h"
@@ -10,13 +9,13 @@ VectorDatabase mainDataBase;
 float Fundamentals::c(){
     int inp;
     float sol;
-    /*if (mainDataBase.findInDatabase("speed of light") != 0){
+    if (mainDataBase.findInDatabase("speed of light") != 0){
         return mainDataBase.findInDatabase("speed of light");
-    }*/
+    }
     cout << "\nwhat constant will you use for the speed of light"<<endl;
     cout << "1) 3x10^8 m/s \n 2) 299 792 458 m / s"<<endl;
     cin >> inp;
-    
+
     if (inp == 0){inp = 1;}
 
     if (inp == 1){sol = 3.0e8;}
@@ -27,47 +26,44 @@ float Fundamentals::c(){
     }
 
     cout << "Therefore the speed of light, c = "<< sol << " m/s" <<endl;
-    //mainDataBase.addToDatabase("speed of light", sol);
+    mainDataBase.addToDatabase("speed of light", sol);
     return sol;
 }
 
 float Fundamentals::velocityF(){
-    cout << "\n what form of input are you giving for the velocity: \n1) x *10^8 m/s\n 2) x m/s  \n3)x*c\n" << endl;
-    int x;
-    float sol;
-    float velocity;
+    cout << "\n what form of input are you giving for the velocity: \n1) x *10^8 m/s \n2) x m/s  \n3)x*c\n" << endl;
+
+    float sol, x, velocity;
     cin >> x;
-    switch (x)
-    {
-     if(input == 1)
+     if(x == 1)
         {
             cout<< "input the value of v : ";
             cin >> x ;
             velocity = x * 1e8;
         }
-    else if(input == 2) 
+    else if(x == 2)
         {
             cout<< "input the value of v : ";
             cin >> x ;
             velocity = x;
         }
-    else if(input) 
+    else if(x == 3)
         {
             cout<< "input the value of v : ";
             cin >> x;
             sol = c();
             velocity = x * sol;
             }
-        
-        else if(input != '\n')
+
+    else if(x != '\n')
         {
             cout << "invalid input, try again " << endl;
             velocityF();
         }
-   
+
     try
     {
-        int err;
+        int err = 1;
         if(velocity > 3e8 )
             throw err;
         cout << "Therefore velocity, v = "<< velocity<< "m/s"<<endl;
@@ -78,6 +74,7 @@ float Fundamentals::velocityF(){
         cout << "the velocity is greater that the speed of light breaking the theory of relativity" << endl;
         velocityF();
     }
+    return velocity;
 }
 
 float Fundamentals::beta(double v){
@@ -108,14 +105,5 @@ float Fundamentals::gamma(){
     cout << "lorentz factor , gamma = "<< gamma<<endl;
     return gamma;
 }
-
-
-
-
-
-
-
-
-
 
 
