@@ -13,7 +13,7 @@ float Fundamentals::c(){
         return mainDataBase.findInDatabase("speed of light");
     }
     cout << "\nwhat constant will you use for the speed of light"<<endl;
-    cout << "1) 3x10^8 m/s \n 2) 299 792 458 m / s"<<endl;
+    cout << "1) 3x10^8 m/s \n2) 299 792 458 m / s"<<endl;
     cin >> inp;
 
     if (inp == 0){inp = 1;}
@@ -85,11 +85,35 @@ float Fundamentals::beta(double v){
 }
 
 float Fundamentals::beta(){
-    float beta;
-    float velo = velocityF();
-    beta = velo / c();
-    cout << "speed ratio , beta = "<< beta<<endl;
-    return beta;
+    int inp = 1;
+    while (inp)
+    {
+        float beta;
+        float velo;
+        cout << "what will you like to determine \n1) beta \n2) velocity"<<endl;
+        cin >> inp;
+        if(inp ==1){
+            velo = velocityF();
+            beta = velo / c();
+            cout << "\nspeed ratio , beta = "<< beta<<endl;
+            inp = 0;
+        }
+        else if (inp == 2)
+        {
+            cout << "\ninput Beta(speed ratio) : " ;
+            cin >> beta;
+            velo = beta * c();
+            cout << "\nfor a speed ratio , beta = "<< beta<<endl;
+            cout << "the velocity of the particle is "<< velo << endl;
+            inp = 0;
+        }
+        else{
+            inp = 1;
+        }
+    }
+
+    
+    
 }
 
 float Fundamentals::gamma(double velocity){
