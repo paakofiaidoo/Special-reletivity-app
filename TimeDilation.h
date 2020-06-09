@@ -2,13 +2,14 @@
 #define TIMEDILATION_H
 #include "Fundamentals.h"
 
-class TimeDilation: public Fundamentals{//time of stationary observer(t)
+class TimeDilation: public Fundamentals{
+    //time of stationary observer(t)
 private :
     float t;
     //time for observer in motion/proper time (to)
     float to;
     //velocity of the moving body
-    double vT;
+    double v;
 	void findT();
 	
 	void findTo();

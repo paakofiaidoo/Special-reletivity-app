@@ -1,0 +1,72 @@
+# depslib dependency file v1.0
+1591572557 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\specialreletivity.cpp
+	"SpecialReletivity.h"
+	<iostream>
+
+1591648877 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\specialreletivity.h
+	"TimeDilation.h"
+	"lorenzTransfrom.h"
+	"LenghtContraction.h"
+	"GalileanTransform.h"
+	"DopplerEffect.h"
+
+1591657211 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\timedilation.h
+	"Fundamentals.h"
+
+1591735068 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\fundamentals.h
+	"VectorDatabase.h"
+
+1591575165 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\vectordatabase.h
+	<vector>
+	<string>
+
+1591739550 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\main.cpp
+	<iostream>
+	"SpecialReletivity.h"
+	"Fundamentals.h"
+
+1591575165 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\vectordatabase.cpp
+	"VectorDatabase.h"
+	<iostream>
+
+1591576756 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\timedilation.cpp
+	"TimeDilation.h"
+	<iostream>
+	<cmath>
+
+1591734980 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\fundamentals.cpp
+	"Fundamentals.h"
+	<iostream>
+	<Cmath>
+
+1591582124 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\lorenztransfrom.h
+	"Fundamentals.h"
+
+1591648539 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\lenghtcontraction.h
+	"Fundamentals.h"
+
+1591582272 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\galileantransform.h
+	"Fundamentals.h"
+
+1591582124 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\lenghtcontraction.cpp
+	<iostream>
+	<cmath>
+	"LenghtContraction.h"
+
+1591582124 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\lorenztransfrom.cpp
+	<iostream>
+	<cmath>
+	"LorenzTransfrom.h"
+
+1591582124 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\galileantransform.cpp
+	"GalileanTransform.h"
+	<iostream>
+
+1591739508 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\dopplereffect.h
+	"Fundamentals.h"
+
+1591734980 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\dopplereffect.cpp
+	"DopplerEffect.h"
+	<iostream>
+	<cmath>
+

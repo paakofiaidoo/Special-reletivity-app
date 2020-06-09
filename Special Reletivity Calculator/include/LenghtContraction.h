@@ -1,10 +1,12 @@
 #ifndef LENGHTCONTRACTION_H
 #define LENGHTCONTRACTION_H
+
 #include "Fundamentals.h"
 
-class LenghtContraction: private Fundamentals
-{	
-	private:
+
+class LenghtContraction : public Fundamentals
+{
+    private:
 		//lenght for observer in motion (l)
 		float l;
 		//lenght observed by stationary observer/proper lenght (lo)
@@ -20,7 +22,6 @@ class LenghtContraction: private Fundamentals
 	public:
 		//main function
 		void lenghtContraction();
-	
 };
 
-#endif
+#endif // LENGHTCONTRACTION_H

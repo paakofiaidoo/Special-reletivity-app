@@ -3,7 +3,7 @@
 #include "VectorDatabase.h"
 #include "Fundamentals.h"
 #include "TimeDilation.cpp"
-#include "lorenzTransfrom.cpp"
+#include "LorenzTransfrom.cpp"
 #include "LenghtContraction.cpp"
 #include "GalileanTransform.cpp"
 #include "Fundamentals.cpp"

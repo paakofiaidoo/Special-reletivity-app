@@ -4,14 +4,7 @@
 //
 //using namespace std;
 //
-////for values of frequency
-//float f,fo;
-////for values of wave lenght
-//float w, wo;
-//// B for beta so c() dont run twice but once
-//float B;
-////velocity of the moving body
-//double vD;
+ 
 //
 //// function to find  t
 //void receding(); 

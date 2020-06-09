@@ -7,17 +7,15 @@ using namespace std;
 //use a do while loop
 
 float Fundamentals::c(){
-    int inp;
     float sol;
     if (FundaDataBase.findInDatabase("speed of light") != 0){
         return FundaDataBase.findInDatabase("speed of light");
     }
     cout << "\nwhat constant will you use for the speed of light"<<endl;
     cout << "1) 3x10^8 m/s \n2) 299 792 458 m / s"<<endl;
+    int inp;
     cin >> inp;
-
-    if (inp == 0){inp = 1;}
-
+    if (inp == 0 ){inp = 1;}
     if (inp == 1){sol = 3.0e8;}
     else if (inp == 2){sol = 2.99792458e8;}
     else if(inp != 1 || inp != 2){
@@ -33,7 +31,7 @@ float Fundamentals::c(){
 float Fundamentals::velocityF(){
     cout << "\n what form of input are you giving for the velocity: \n1) x *10^8 m/s \n2) x m/s  \n3)x*c\n" << endl;
 
-    float sol, x, velocity;
+    float sol, x;
     cin >> x;
      if(x == 1)
         {
@@ -78,33 +76,32 @@ float Fundamentals::velocityF(){
 }
 
 float Fundamentals::beta(double v){
-    float beta;
-    beta = v / c();
-    cout << "speed ratio , beta = "<< beta<<endl;
-    return beta;
+    float betatemp;
+    betatemp = v / c();
+    cout << "speed ratio , beta = "<< betatemp<<endl;
+    return betatemp;
 }
 
-float Fundamentals::beta(){
+float Fundamentals::betaUI(){
     int inp = 1;
+    float betatemp;
     while (inp)
     {
-        float beta;
-        float velo;
         cout << "what will you like to determine \n1) beta \n2) velocity"<<endl;
         cin >> inp;
         if(inp ==1){
-            velo = velocityF();
-            beta = velo / c();
-            cout << "\nspeed ratio , beta = "<< beta<<endl;
+            velocity = velocityF();
+            betatemp = velocity / c();
+            cout << "\nspeed ratio , beta = "<< betatemp<<endl;
             inp = 0;
         }
         else if (inp == 2)
         {
             cout << "\ninput Beta(speed ratio) : " ;
-            cin >> beta;
-            velo = beta * c();
-            cout << "\nfor a speed ratio , beta = "<< beta<<endl;
-            cout << "the velocity of the particle is "<< velo << endl;
+            cin >> betatemp;
+            velocity = betatemp * c();
+            cout << "\nfor a speed ratio , beta = "<< betatemp<<endl;
+            cout << "the velocity of the particle is "<< velocity << endl;
             inp = 0;
         }
         else{
@@ -112,22 +109,22 @@ float Fundamentals::beta(){
         }
     }
 
-    
-    return beta;
+
+    return betatemp;
 }
 
 float Fundamentals::gamma(double velocity){
-    float gamma;
-    gamma = 1 / (sqrt(1 - pow(beta(velocity),2)));
-    return gamma;
+    float gammatemp;
+    gammatemp = 1 / (sqrt(1 - pow(beta(velocity),2)));
+    return gammatemp;
 }
 
 float Fundamentals::gamma(){
-    float gamma;
-    float velo = velocityF();
-    gamma = 1 / (sqrt(1 - pow(beta(velo),2)));
-    cout << "lorentz factor , gamma = "<< gamma<<endl;
-    return gamma;
+    float gammatemp;
+    float velocity = velocityF();
+    gammatemp = 1 / (sqrt(1 - pow(beta(velocity),2)));
+    cout << "lorentz factor , gamma = "<< gammatemp<<endl;
+    return gammatemp;
 }
 
 
