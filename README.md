@@ -21,6 +21,8 @@ for this calcuations we will use:
 
 
 recomended ide is code:blocks
+download code::blocks from 
+http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/32bit/codeblocks-20.03mingw-32bit-setup.exe
 
 how to open project when using code::blocks
 -git clone "https://github.com/paakofiaidoo/Special-reletivity-app.git"
@@ -31,4 +33,4 @@ how to open project when using code::blocks
 how to use when using other ide
 git clone "https://github.com/paakofiaidoo/Special-reletivity-app.git"
 cd "Special Reletivity app"
-open folder in  
+open folder in your text editor and play around form there 
