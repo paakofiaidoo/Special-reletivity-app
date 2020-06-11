@@ -9,7 +9,7 @@
 #include "RelativisticMomentum.h"
 //#include "Fundamentals.h"
 
-class SpecialReletivity : public TimeDilation, public LorenzTransfrom , public LenghtContraction, public GalileanTransform, public DopplerEffect, public RelativisticMomentum
+class SpecialReletivity : public TimeDilation, public LorenzTransfrom , public LenghtContraction, public GalileanTransform, public DopplerEffect, public Re
 {
     public:
         SpecialReletivity();

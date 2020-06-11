@@ -8,17 +8,25 @@ class DopplerEffect : private Fundamentals
         void dopplerEffectUI();
     private:
         //for values of frequency f(source) fo(receiver)
-        float f,fo;
+        float Fs,Fr;
         //for values of wavelength w(source) wo(receiver)
         float Ws, Wr;
         //velocity of the moving body
         double v;
-        void approchingFreq();
-        void recedingFreq();
-        float approchingWaveFindWs(float recivedWavelenght, float waveVelocity);
-        float approchingWaveFindWr(float sourceWavelenght,float waveVelocity);
-        float approchingWaveFindV(float sourceWavelenght, float recivedWavelenght);
-        void approchingWaveUI();
+
+        float approachingFreqFindFs(float recivedFreq, float FreqVelocity);
+        float approachingFreqFindFr(float sourceFreq,float FreqVelocity);
+        float approachingFreqFindV(float sourceFreq, float recivedFreq);
+        void approachingFreqUI();
+        float recedingFreqFindFs(float recivedFreq, float FreqVelocity);
+        float recedingFreqFindFr(float sourceFreq,float FreqVelocity);
+        float recedingFreqFindV(float sourceFreq,float recivedFreq);
+        void recedingFreqUI();
+
+        float approachingWaveFindWs(float recivedWavelenght, float waveVelocity);
+        float approachingWaveFindWr(float sourceWavelenght,float waveVelocity);
+        float approachingWaveFindV(float sourceWavelenght, float recivedWavelenght);
+        void approachingWaveUI();
         float recedingWaveFindWs(float recivedWavelenght, float waveVelocity);
         float recedingWaveFindWr(float sourceWavelenght,float waveVelocity);
         float recedingWaveFindV(float sourceWavelenght,float recivedWavelenght);

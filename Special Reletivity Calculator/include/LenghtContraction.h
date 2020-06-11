@@ -4,7 +4,7 @@
 #include "Fundamentals.h"
 
 
-class LenghtContraction : public Fundamentals
+class LenghtContraction : private Fundamentals
 {
     private:
 		//lenght for observer in motion (l)
