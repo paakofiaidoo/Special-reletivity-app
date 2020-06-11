@@ -33,6 +33,3 @@
 
 *.win
 /.vscode
-*.layout
-
-*.save

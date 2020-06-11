@@ -24,7 +24,6 @@ void RelativisticMomentum::relativisticMomentumUI()
         v = findVelocity(massFunc(), P);
         cout << "The velocity of the body is : "<< v << "m/s"<<endl;
     }
-
 }
 
 float RelativisticMomentum::findVelocity(float mass, float momentum){
