@@ -33,3 +33,4 @@
 
 *.win
 /.vscode
+*.save

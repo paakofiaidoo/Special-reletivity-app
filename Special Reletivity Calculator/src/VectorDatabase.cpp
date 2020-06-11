@@ -6,7 +6,7 @@ using namespace std;
 void VectorDatabase::addToDatabase(string name, double num){
     //input in the name of the data you what to put in
     header.push_back(name);
-    //input the value to the date you want to put in dtatbase
+    //input the value to the date you want to put in database
     data.push_back(num);
 }
 

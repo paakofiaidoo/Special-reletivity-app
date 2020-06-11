@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1591911477 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\specialreletivity.cpp
+1591915912 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\specialreletivity.cpp
 	"SpecialReletivity.h"
 	<iostream>
 
@@ -78,7 +78,7 @@
 1591830204 c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\include\relativisticmomentum.h
 	"Fundamentals.h"
 
-1591830204 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\relativisticmomentum.cpp
+1591913891 source:c:\users\koquf\desktop\pro\++\special reletivity app\special reletivity calculator\src\relativisticmomentum.cpp
 	"RelativisticMomentum.h"
 	<cmath>
 	<iostream>

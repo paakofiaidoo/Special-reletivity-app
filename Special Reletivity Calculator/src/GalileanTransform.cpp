@@ -8,7 +8,7 @@ using namespace std;
 
 
 void GalileanTransform::galileanTransform(){
-    std::cout << "Asuming S and S` are two inertial frames of reference. S' which is moving with respect to S at the constant velocity v in the direction of X axis which begain at a time to=0s and event was recored at time t = t`" << std::endl;
+    cout << "Assuming S and S` are two inertial frames of reference. S' which is moving with respect to S at the constant velocity v in the direction of X axis which began at a time to=0s and event was recored at time t = t`" << endl;
     cout << "what are you calculating for : " << endl;
     cout << "1. Galilean Position Transform\n2. Galilean Velocity Transform" << endl;
     int inp;
@@ -30,7 +30,7 @@ void GalileanTransform::galileanTransform(){
 }
 
 void GalileanTransform::galileanPositionTransform(){
-    std::cout << "\nWhat will you be solving for \n1) x\n,2)x`\n3) t\n4) v" << std::endl;
+    cout << "\nWhat will you be solving for \n1) x\n,2)x`\n3) t\n4) v" << endl;
     int inp;
     cin >> inp;
     switch (inp)
@@ -43,7 +43,7 @@ void GalileanTransform::galileanPositionTransform(){
         cout << "Input the value for t : ";
         cin >> t;
         x = x1 +(v*t);
-        cout << "\n The position on x-aixs in S is x = "<< x <<endl;
+        cout << "\n The position on x-axis in S is x = "<< x <<endl;
         break;
     case 2:
         cout << "Input the value for x : ";
@@ -53,7 +53,7 @@ void GalileanTransform::galileanPositionTransform(){
         cout << "Input the value for t : ";
         cin >> t;
         x1 = x - (v*t);
-        cout << "\n The position on x-aixs in S` is x = "<< x1 <<endl;
+        cout << "\n The position on x-axis in S` is x = "<< x1 <<endl;
         break;
     case 3:
         cout << "Input the value for x : ";
@@ -76,7 +76,7 @@ void GalileanTransform::galileanPositionTransform(){
         cout << "\n The velocity, v = "<< v <<endl;
         break;
     default:
-        std::cout << "Invalid input, try again " << std::endl;
+        cout << "Invalid input, try again " << endl;
         galileanPositionTransform();
         break;
     }
@@ -84,7 +84,7 @@ void GalileanTransform::galileanPositionTransform(){
 }
 
 void GalileanTransform::galileanVelocityTransform(){
-    std::cout << "\nWhat will you be solving for \n1) Ux\n,2)x`\n3) v" << std::endl;
+    cout << "\nWhat will you be solving for \n1) Ux\n,2)x`\n3) v" << endl;
     int inp;
     cin >> inp;
     switch (inp)
@@ -114,7 +114,7 @@ void GalileanTransform::galileanVelocityTransform(){
         cout << "\n The time after the event t = "<< v <<endl;
         break;
     default:
-        std::cout << "Invalid input, try again " << std::endl;
+        cout << "Invalid input, try again " << endl;
         galileanPositionTransform();
         break;
     }

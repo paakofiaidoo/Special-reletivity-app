@@ -8,8 +8,8 @@ using namespace std;
 
 
 void TimeDilation::timeDilation(){
-    std::cout << "what are you calculating for : " << std::endl;
-    std::cout << "1. time of stationary observer\n2. proper time / time for observer in motion\n3. velocity of motion" << std::endl;
+    cout << "what are you calculating for : " << endl;
+    cout << "1. time of stationary observer\n2. proper time / time for observer in motion\n3. velocity of motion" << endl;
     int inp;
     cin >> inp;
     switch (inp)
@@ -25,7 +25,7 @@ void TimeDilation::timeDilation(){
         break;
 
     default:
-        std::cout << "invalid input, try again: " << std::endl;
+        cout << "invalid input, try again: " << endl;
         timeDilation();
         break;
     }

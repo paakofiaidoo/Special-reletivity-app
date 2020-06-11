@@ -175,19 +175,19 @@ float Fundamentals::energyConv(double value, string from, string to){
         if (to == "J")
         {
             cout << "value of " << value;
-            std::cout << " from J to J is " << value <<" J"<< std::endl;
+            cout << " from J to J is " << value <<" J"<< endl;
             return value;
         }else if (to == "eV")
         {
             cout << "value of " << value;
             value = value / 1.6022e-19;
-            std::cout << " from J to eV is " << value <<" eV"<< std::endl;
+            cout << " from J to eV is " << value <<" eV"<< endl;
             return value;
         }else if(to == "MeV")
         {
             cout << "value of " << value;
             value = value / (1.6022e-19 * 1e6);
-            std::cout << " from J to MeV is " << value <<" MeV"<< std::endl;
+            cout << " from J to MeV is " << value <<" MeV"<< endl;
             return value;
         }else
         {
@@ -198,18 +198,18 @@ float Fundamentals::energyConv(double value, string from, string to){
         {
             cout << "value of " << value;
             value = value * 1.6022e-19;
-            std::cout << " from eV to J is " << value <<" J"<< std::endl;
+            cout << " from eV to J is " << value <<" J"<< endl;
             return value;
         }else if (to == "eV")
         {
             cout << "value of " << value;
-            std::cout << " from eV to eV is " << value <<" eV"<< std::endl;
+            cout << " from eV to eV is " << value <<" eV"<< endl;
             return value;
         }else if(to == "MeV")
         {
             cout << "value of " << value;
             value = value  * 1e-6;
-            std::cout << " from eV to MeV is " << value <<" MeV"<< std::endl;
+            cout << " from eV to MeV is " << value <<" MeV"<< endl;
             return value;
         }else
         {
@@ -220,18 +220,18 @@ float Fundamentals::energyConv(double value, string from, string to){
         {
             cout << "value of " << value;
             value = value * 1.6022e-19 *1e6;
-            std::cout << " from MeV to J is " << value <<" J"<< std::endl;
+            cout << " from MeV to J is " << value <<" J"<< endl;
             return value;
         }else if (to == "eV")
         {
             cout << "value of " << value;
             value = value *1e6;
-            std::cout << " from MeV to eV is " << value <<" eV"<< std::endl;
+            cout << " from MeV to eV is " << value <<" eV"<< endl;
             return value;
         }else if(to == "MeV")
         {
             cout << "value of " << value;
-            std::cout << " from MeV to MeV is " << value <<" MeV"<< std::endl;
+            cout << " from MeV to MeV is " << value <<" MeV"<< endl;
             return value;
         }else
         {
@@ -242,5 +242,5 @@ float Fundamentals::energyConv(double value, string from, string to){
         cout << "i don't know what i am converting from so i will be converting from J "<<endl;
         energyConv(value, "J", to);
     }
-    return value
+    return value;
 }

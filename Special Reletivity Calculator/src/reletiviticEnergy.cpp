@@ -17,17 +17,17 @@ float reletiviticEnergy::findEnergyWithKineticEnergy(float kineticEnergy, float 
     return kineticEnergy + (mass * pow(c(),2));
 }
 void reletiviticEnergy::reletiviticEnergyUI(){
-    std::cout << "for a moving object let us calculate its " << std::endl;
-    std::cout << "1. total Energy" << std::endl;
-    std::cout << "2. rest Energy(energy when object is not in motion)" << std::endl;
-    std::cout << "3. Energy when object is massless" << std::endl;
-    std::cout << "Energy when kinetic Eneryg and mass is given" << std::endl;
+    cout << "for a moving object let us calculate its " << endl;
+    cout << "1. total Energy" << endl;
+    cout << "2. rest Energy(energy when object is not in motion)" << endl;
+    cout << "3. Energy when object is massless" << endl;
+    cout << "Energy when kinetic Eneryg and mass is given" << endl;
     char option;
     cin >> option;
     switch (option)
     {
     case '1':
-        std::cout << "input momentum :  " << std::endl;
+        cout << "input momentum :  " << endl;
         cin >> P;
         E = findEnergy(P, massFunc());
         break;
@@ -35,21 +35,21 @@ void reletiviticEnergy::reletiviticEnergyUI(){
         E = findEnergyAtRest(massFunc());
         break;
     case '3':
-        std::cout << "input momentum :  " << std::endl;
+        cout << "input momentum :  " << endl;
         cin >> P;
         E = findEnergyNoMass(P);
         break;
     case '4':
-        std::cout << "input Kinetic Energy :  " << std::endl;
+        cout << "input Kinetic Energy :  " << endl;
         cin >> KE;
         E = findEnergyWithKineticEnergy(KE, massFunc());
         break;
     default:
-        std::cout << "invalid input , try again" << std::endl;
+        cout << "invalid input , try again" << endl;
         reletiviticEnergyUI();
         break;
     }
-    std::cout << "therefor energy of the object is "<< E << "J" << std::endl;
+    cout << "therefor energy of the object is "<< E << "J" << endl;
     energyConv(E,"J","eV");
     energyConv(E,"J","MeV");
 }
