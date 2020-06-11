@@ -1,6 +1,8 @@
+#include "TimeDilation.h"
+
 #include <iostream>
 #include <cmath>
-#include "TimeDilation.h"
+
 
 using namespace std;
 
@@ -16,10 +18,10 @@ void TimeDilation::timeDilation(){
         findT();
         break;
     case 2:
-        findTo();
+        findT0();
         break;
     case 3:
-        findVTime();
+        findV();
         break;
 
     default:
@@ -31,33 +33,30 @@ void TimeDilation::timeDilation(){
 
 void TimeDilation::findT(){
     cout << "input the value for to(proper time/time for observer in motion) : ";
-    cin >> to;
+    cin >> t0;
     cout << "input the value for v(velocity of the body) : ";
-    vT = velocityF();
-    t = to * gamma(vT);
+    v = velocityF();
+    t = t0 * gamma(v);
     cout << "\n The time for stationary observer is "<< t<< " sec"<<endl;
 }
 
-void TimeDilation::findTo(){
+void TimeDilation::findT0(){
     cout << "input the value for t(time for stationary observer) : ";
     cin >> t;
     cout << "\ninput the value for v(velocity of the body) : "<<endl;
-    vT = velocityF();
-    t = to / gamma(vT);
+    v = velocityF();
+    t = t0 / gamma(v);
     cout << "\n The proper time/time for observer in motion, to = "<< t << " sec"<<endl;
 
 }
 
-void TimeDilation::findVTime(){
+void TimeDilation::findV(){
     cout << "input the value for t(time for stationary observer) : ";
     cin >> t;
     cout << "\ninput the value for to(proper time/time for observer in motion) : ";
-    cin >> to;
-    float com = to/t;
-    vT = c() * (sqrt(1 - pow(com,2)));
-    cout << "\n The velocity of the body, v = "<< vT <<endl;
+    cin >> t0;
+    float com = t0/t;
+    v = c() * (sqrt(1 - pow(com,2)));
+    cout << "\n The velocity of the body, v = "<< v <<endl;
 
 }
-
-
-

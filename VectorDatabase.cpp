@@ -26,6 +26,7 @@ double VectorDatabase::findInDatabase(string dataName){
 
     return 0;
 }
+
 void VectorDatabase::displayDatabase(){
     for (unsigned int i = 0; i < data.size(); i++)
     {
@@ -33,25 +34,10 @@ void VectorDatabase::displayDatabase(){
     }
 
 }
+
 void VectorDatabase::displayData(int i){
     cout << i <<", "<< header[i] << " : " << data[i] << endl;
 }
 
-
-
-
-
-
-/*int main() {
-    Database mainData;
-    mainData.addToDatabase("ma", 123);
-    mainData.addToDatabase("ma", 34);
-    mainData.addToDatabase("ma", 4);
-    mainData.addToDatabase("ma", 153);
-    mainData.displayDatabase();
-    cout << mainData.findInDatabase("ma");
-    return 0;
-}
-*/
 
 

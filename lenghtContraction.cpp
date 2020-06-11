@@ -58,5 +58,3 @@ void LenghtContraction::findV(){
     cout << "\n The velocity of the body, v = "<< v <<endl;
 
 }
-
-

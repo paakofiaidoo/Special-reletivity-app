@@ -1,27 +1,28 @@
 #include <iostream>
 #include "SpecialReletivity.h"
-#include "VectorDatabase.h"
+#include "SpecialReletivity.cpp"
+#include "VectorDatabase.cpp"
 #include "Fundamentals.h"
+#include "Fundamentals.cpp"
 #include "TimeDilation.cpp"
-#include "LorenzTransfrom.cpp"
+#include "lorenzTransfrom.cpp"
 #include "LenghtContraction.cpp"
 #include "GalileanTransform.cpp"
-#include "Fundamentals.cpp"
-#include "VectorDatabase.cpp"
-#include "SpecialReletivity.cpp"
+#include "DopplerEffect.cpp"
+#include "RelativisticMomentum.cpp"
+#include "ReletiviticKineticEnergy.cpp"
+#include "reletiviticEnergy.cpp"
 
-VectorDatabase th;
 using namespace std;
 
 int main() {
-	th.displayDatabase();
-
+    Fundamentals test;
 	string option;
 
-
     do{
-        // ui is a construtor for the class
+        // ui is a constructor for the class
     	SpecialReletivity Object;
+
         cin >> option;
         if(option =="1"){
             Object.timeDilation();
@@ -36,20 +37,17 @@ int main() {
            Object.lorenzTransformations();
         }
         else if(option =="5"){
-            //dopplerEffect();
-            cout << "under development";
+            Object.dopplerEffectUI();
         }
         else if(option =="6"){
-            //ReletiviticMomentum();
-            cout << "under development";
+            Object.relativisticMomentumUI();
+
         }
         else if(option =="7"){
-            //ReletiviticEnergy();
-            cout << "under development";
+            Object.reletiviticKineticEnergyUI();
         }
         else if(option =="8"){
-            //ReletiviticMass();
-            cout << "under development";
+            Object.reletiviticEnergyUI();
         }
         else if(option =="9"){
         	Fundamentals Motion;
@@ -57,10 +55,10 @@ int main() {
         }
         else if(option =="10"){
             Fundamentals Motion;
-            Motion.beta();
+            Motion.betaUI();
             }
         else{
-            cout << "invalid input try again";
+            cout << "invalid input try again"<<endl;
             main();
         }
 

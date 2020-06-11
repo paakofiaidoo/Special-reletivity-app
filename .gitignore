@@ -34,3 +34,5 @@
 *.win
 /.vscode
 *.layout
+
+*.save
