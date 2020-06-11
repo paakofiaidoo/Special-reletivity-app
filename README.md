@@ -18,3 +18,17 @@ for this calcuations we will use:
 - velocity of the motion, v
 -beta(speed ratio) = c / v
 -gamma(lorentz factor) 
+
+
+recomended ide is code:blocks
+
+how to open project when using code::blocks
+-git clone "https://github.com/paakofiaidoo/Special-reletivity-app.git"
+-cd "Special Reletivity app"
+-cd "Special Reletivity Calculator"
+-"Special Reletivity Calculator.cbp" 
+
+how to use when using other ide
+git clone "https://github.com/paakofiaidoo/Special-reletivity-app.git"
+cd "Special Reletivity app"
+open folder in  

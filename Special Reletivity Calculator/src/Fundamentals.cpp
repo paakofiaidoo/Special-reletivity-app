@@ -1,6 +1,7 @@
 #include "Fundamentals.h"
 #include <iostream>
 #include <Cmath>
+#include <string>
 
 
 using namespace std;
@@ -145,7 +146,7 @@ float Fundamentals::massFunc(){
     return mass;
 }
 
-float energyfunc(){
+float Fundamentals::energyFunc(){
     cout << "what form of input will will you be giving for energy\n 1)J \n2)eV \n3)MeV"<<endl;
     float energy;
     char option;
@@ -160,11 +161,86 @@ float energyfunc(){
     }else if(option == '3'){
         cout << "input your energy MeV : ";
         cin >> energy;
-        energy = energy * 1.6605e-27;
+        energy = energy * 1.6022e-19 * 1e6;
     }else{
         cout << "Invalid option input try again\n"<<endl;
         energyFunc();
     }
-    cout << "mass is therefore "<< mass << " Kg"<<endl;
-    return mass;
+    cout << "energy is therefore "<< energy << " J"<<endl;
+    return energy;
+}
+
+float Fundamentals::energyConv(double value, string from, string to){
+    if(from == "J"){
+        if (to == "J")
+        {
+            cout << "value of " << value;
+            std::cout << " from J to J is " << value <<" J"<< std::endl;
+            return value;
+        }else if (to == "eV")
+        {
+            cout << "value of " << value;
+            value = value / 1.6022e-19;
+            std::cout << " from J to eV is " << value <<" eV"<< std::endl;
+            return value;
+        }else if(to == "MeV")
+        {
+            cout << "value of " << value;
+            value = value / (1.6022e-19 * 1e6);
+            std::cout << " from J to MeV is " << value <<" MeV"<< std::endl;
+            return value;
+        }else
+        {
+            cout << "i don't know what i am converting to"<<endl;
+        }
+    }else if(from == "eV"){
+        if (to == "J")
+        {
+            cout << "value of " << value;
+            value = value * 1.6022e-19;
+            std::cout << " from eV to J is " << value <<" J"<< std::endl;
+            return value;
+        }else if (to == "eV")
+        {
+            cout << "value of " << value;
+            std::cout << " from eV to eV is " << value <<" eV"<< std::endl;
+            return value;
+        }else if(to == "MeV")
+        {
+            cout << "value of " << value;
+            value = value  * 1e-6;
+            std::cout << " from eV to MeV is " << value <<" MeV"<< std::endl;
+            return value;
+        }else
+        {
+            cout << "i don't know what i am converting to"<<endl;
+        }
+    }else if(from == "MeV"){
+        if (to == "J")
+        {
+            cout << "value of " << value;
+            value = value * 1.6022e-19 *1e6;
+            std::cout << " from MeV to J is " << value <<" J"<< std::endl;
+            return value;
+        }else if (to == "eV")
+        {
+            cout << "value of " << value;
+            value = value *1e6;
+            std::cout << " from MeV to eV is " << value <<" eV"<< std::endl;
+            return value;
+        }else if(to == "MeV")
+        {
+            cout << "value of " << value;
+            std::cout << " from MeV to MeV is " << value <<" MeV"<< std::endl;
+            return value;
+        }else
+        {
+            cout << "i don't know what i am converting to"<<endl;
+        }
+    }else
+    {
+        cout << "i don't know what i am converting from so i will be converting from J "<<endl;
+        energyConv(value, "J", to);
+    }
+    return value;
 }

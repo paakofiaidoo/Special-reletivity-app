@@ -1,6 +1,6 @@
 #ifndef FUNDAMENTALS_H
 #define FUNDAMENTALS_H
-
+#include <string>
 #include "VectorDatabase.h"
 
 
@@ -19,7 +19,8 @@ class Fundamentals
 		//this function is for display calculation in main.cpp
 		float gamma();
 		float massFunc();
-		float energyfunc();
+		float energyFunc();
+		float energyConv(double value, std::string from, std::string to);
     private:
         VectorDatabase FundaDataBase;
         float velocity;

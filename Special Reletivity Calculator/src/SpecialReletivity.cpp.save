@@ -17,8 +17,8 @@ SpecialReletivity::SpecialReletivity(){
     cout << "This application is a calculator for all the effect and applcation of special reletivity\n \n"
     <<"1. time dilation\n2. lenght contraction\n3. Gallian Transformations\n"
     <<"4. Lorentz Transformations\n5. Reletivitic doppler effect\n6. Reletivitic Momentum\n"
-    <<"7. Reletivitic Kinetic Energy\n8. Reletivitic Energy \n9. Reletivitic mass\n"
-    <<"10. lorentz factor (gamma)\n11. speed ratio (beta)\n\n\n\n"<<endl;
+    <<"7. Reletivitic Kinetic Energy\n8. Reletivitic Energy \n"
+    <<"9. lorentz factor (gamma)\n10. speed ratio (beta)\n\n\"<<endl;
 
 
 }

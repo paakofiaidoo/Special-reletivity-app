@@ -7,13 +7,13 @@
 using namespace std;
 
 int main() {
-
-
+    Fundamentals test;
 	string option;
 
     do{
         // ui is a constructor for the class
     	SpecialReletivity Object;
+
         cin >> option;
         if(option =="1"){
             Object.timeDilation();
@@ -35,22 +35,16 @@ int main() {
 
         }
         else if(option =="7"){
-            //reletiviticKineticEnergy();
-            cout << "under development";
+            Object.reletiviticKineticEnergyUI();
         }
         else if(option =="8"){
-            //ReletiviticEnergy();
-            cout << "under development";
+            Object.reletiviticEnergyUI();
         }
         else if(option =="9"){
-            //ReletiviticMass();
-            cout << "under development";
-        }
-        else if(option =="10"){
         	Fundamentals Motion;
             Motion.gamma();
         }
-        else if(option =="11"){
+        else if(option =="10"){
             Fundamentals Motion;
             Motion.betaUI();
             }
