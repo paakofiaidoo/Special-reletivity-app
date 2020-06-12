@@ -1,17 +1,8 @@
 #include <iostream>
 #include "SpecialReletivity.h"
-#include "SpecialReletivity.cpp"
-#include "VectorDatabase.cpp"
+//#include "VectorDatabase.h"
 #include "Fundamentals.h"
-#include "Fundamentals.cpp"
-#include "TimeDilation.cpp"
-#include "lorenzTransfrom.cpp"
-#include "LenghtContraction.cpp"
-#include "GalileanTransform.cpp"
-#include "DopplerEffect.cpp"
-#include "RelativisticMomentum.cpp"
-#include "ReletiviticKineticEnergy.cpp"
-#include "reletiviticEnergy.cpp"
+
 
 using namespace std;
 
