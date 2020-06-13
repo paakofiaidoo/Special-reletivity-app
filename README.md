@@ -17,6 +17,9 @@ for this calculations we will use:
 -the speed of light ,c which can be c= 3e8 m/s or c= 299792458 m/s
 
 
+this is a code::blocks project 
+
+source code are in the /src folder and header files are in the /include folder and exe if in the /bin/release 
 
 recommended ide is code:blocks
 download code::blocks from 
