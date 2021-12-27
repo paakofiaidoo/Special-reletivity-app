@@ -1,6 +1,8 @@
 # Special-relativity-calculator
-This application is a calculator for all the effect and application of special relativity 
+
+This application is a calculator for all the effect and application of special relativity
 this involves:
+
 1. time dilation
 2. length contraction
 3. Galilean Transformations
@@ -14,19 +16,24 @@ this involves:
 
 for this calculations we will use:
 
--the speed of light ,c which can be c= 3e8 m/s or c= 299792458 m/s
+    The speed of light, c which can be c = 3e8 m/s OR c = 299792458 m/s
 
+:: This is a code::blocks project
 
-this is a code::blocks project 
+- source code are in the `/src` folder
 
-source code are in the /src folder and header files are in the /include folder and exe if in the /bin/release 
+- header files are in the `/include` folder
+
+- exe if in the `/bin/release`
 
 recommended ide is code:blocks
-download code::blocks from 
-http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/32bit/codeblocks-20.03mingw-32bit-setup.exe
+
+download code::blocks from
+<http://sourceforge.net/projects/codeblocks/files/Binaries/20.03/Windows/32bit/codeblocks-20.03mingw-32bit-setup.exe>
 
 how to open project when using code::blocks
--git clone "https://github.com/paakofiaidoo/Special-reletivity-app.git"
--cd "Special Relativity app"
--cd "Special Relativity Calculator"
--"Special Relativity Calculator.cbp" 
+
+    git clone https://github.com/paakofiaidoo/Special-reletivity-app.git
+    cd Special Relativity app
+    cd Special Relativity Calculator
+    Special Relativity Calculator.cbp
